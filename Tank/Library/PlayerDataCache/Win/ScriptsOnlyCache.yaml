@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - Turret
     Mirror.Components.dll:
     - Mirror.NetworkTransform
+    - Mirror.NetworkTransformChild
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
@@ -55,15 +56,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9874}
     - Class: 114
-      Script: {instanceID: 10792}
+      Script: {instanceID: 10610}
     - Class: 114
-      Script: {instanceID: 10872}
+      Script: {instanceID: 10794}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 10874}
     - Class: 114
-      Script: {instanceID: 11562}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 15426}
+      Script: {instanceID: 11564}
+    - Class: 114
+      Script: {instanceID: 11694}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -370,6 +373,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player_NetworkSetup
   - hash:
       serializedVersion: 2
       Hash: 702330b33d6f348f76db0c974f6e02c3
@@ -730,12 +739,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player_NetworkSetup
   platform: 5
   scenePathNames:
   - Assets/Scenes/game.unity

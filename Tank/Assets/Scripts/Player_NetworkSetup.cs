@@ -13,8 +13,8 @@ public class Player_NetworkSetup : NetworkBehaviour
         {
             GetComponent<TankMovement>().enabled = true;
             GetComponentInChildren<Camera>().enabled = true;
-            //GetComponentInChildren<Turret>().enabled = true;
-            //GetComponentInChildren<AudioListener>().enabled = true;
+            GetComponentInChildren<Turret>().enabled = true;
+            GetComponentInChildren<AudioListener>().enabled = true;
         }
     }
 
