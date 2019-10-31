@@ -9,39 +9,38 @@ public class TankCreation : MonoBehaviour
 
     };
 
-    int selected = 0;
-    GameObject go;
+    int mainSelected = 0;
+    GameObject mainTurret;
     // Start is called before the first frame update
     void Start()
     {
-        GameObject offset = MainTurrets[selected] as GameObject;
-
-        Vector3 turretpos = GameObject.Find("MainTurret").transform.position + offset.transform.position;
-
-        go = Instantiate(MainTurrets[selected], (turretpos), Quaternion.identity) as GameObject;
-        go.transform.parent = GameObject.Find("MainTurret").transform;
-
-
+        CreateTurret();
     }
+    private void CreateTurret()
+    {
+        // get position of the turret mount and then add the offset from the prefab
+        Vector3 turretpos = GameObject.Find("MainTurret").transform.position + (MainTurrets[mainSelected] as GameObject).transform.position;
+
+        mainTurret = Instantiate(MainTurrets[mainSelected], (turretpos), Quaternion.identity) as GameObject;
+        mainTurret.transform.parent = GameObject.Find("MainTurret").transform;
+    }
+
+
+
     public void Iterate(int iteration)
     {
-        if (iteration > 0 && selected < MainTurrets.Count - 1)
+        if (iteration > 0 && mainSelected < MainTurrets.Count - 1)
         {
-            selected++;
+            mainSelected++;
         }
-        if (iteration < 0 && selected >= MainTurrets.Count - 1)
+        if (iteration < 0 && mainSelected >= MainTurrets.Count - 1)
         {
-            selected--;
+            mainSelected--;
         }
 
-        Destroy(go);
+        Destroy(mainTurret);
 
-        GameObject offset = MainTurrets[selected] as GameObject;
-
-        Vector3 turretpos = GameObject.Find("MainTurret").transform.position + offset.transform.position;
-
-        go = Instantiate(MainTurrets[selected], (turretpos), Quaternion.identity) as GameObject;
-        go.transform.parent = GameObject.Find("MainTurret").transform;
+        CreateTurret();
     }
 
     // Update is called once per frame
