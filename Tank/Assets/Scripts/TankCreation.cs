@@ -9,13 +9,32 @@ public class TankCreation : MonoBehaviour
 
     };
 
+    int selected = 0;
+    GameObject go;
     // Start is called before the first frame update
     void Start()
     {
-        GameObject go = Instantiate(MainTurrets[1], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        go = Instantiate(MainTurrets[selected], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         go.transform.parent = GameObject.Find("MainTurret").transform;
         go.transform.position = go.transform.parent.position;
 
+    }
+    public void Iterate(int iteration)
+    {
+        if (iteration > 0 && selected < MainTurrets.Count - 1)
+        {
+            selected++;
+        }
+        if (iteration < 0 && selected >= MainTurrets.Count - 1)
+        {
+            selected--;
+        }
+
+        Destroy(go);
+
+        go = Instantiate(MainTurrets[selected], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        go.transform.parent = GameObject.Find("MainTurret").transform;
+        go.transform.position = go.transform.parent.position;
     }
 
     // Update is called once per frame
