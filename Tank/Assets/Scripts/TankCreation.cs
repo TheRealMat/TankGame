@@ -48,7 +48,7 @@ public class TankCreation : MonoBehaviour
         {
             mainTurretSelected++;
         }
-        if (iteration < 0 && mainTurretSelected >= MainTurrets.Count - 1)
+        if (iteration < 0 && mainTurretSelected > 0)
         {
             mainTurretSelected--;
         }
@@ -63,7 +63,7 @@ public class TankCreation : MonoBehaviour
         {
             hullSelected++;
         }
-        if (iteration < 0 && hullSelected >= Hulls.Count - 1)
+        if (iteration < 0 && hullSelected > 0)
         {
             hullSelected--;
         }
