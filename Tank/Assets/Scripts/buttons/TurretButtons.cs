@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretRight : MonoBehaviour
+public class TurretButtons : MonoBehaviour
 {
     public int value;
     public void DoTheThing()

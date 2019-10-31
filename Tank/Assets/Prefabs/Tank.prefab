@@ -173,7 +173,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.45, y: 0.41}
+  m_Size: {x: 0.47, y: 0.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -196,8 +196,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.45, y: 0.41}
-    newSize: {x: 0.45, y: 0.41}
+    oldSize: {x: 0.47, y: 0.46}
+    newSize: {x: 0.47, y: 0.46}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -289,8 +289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: a6cc4225f59c47e4dba575e5cd2e92c4
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 3885075896
 --- !u!114 &5619506864158739717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,11 +387,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2518297762222076012}
     m_Modifications:
-    - target: {fileID: 6571723469635995347, guid: 579b8b0054d09104aa8c89554b99fdf9,
-        type: 3}
-      propertyPath: m_Name
-      value: Mk1TurretFlame
-      objectReference: {fileID: 0}
     - target: {fileID: 1909148013949292298, guid: 579b8b0054d09104aa8c89554b99fdf9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -446,6 +441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6571723469635995347, guid: 579b8b0054d09104aa8c89554b99fdf9,
+        type: 3}
+      propertyPath: m_Name
+      value: Mk1TurretFlame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 579b8b0054d09104aa8c89554b99fdf9, type: 3}
