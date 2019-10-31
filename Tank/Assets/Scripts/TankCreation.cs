@@ -14,9 +14,13 @@ public class TankCreation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        go = Instantiate(MainTurrets[selected], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        GameObject offset = MainTurrets[selected] as GameObject;
+
+        Vector3 turretpos = GameObject.Find("MainTurret").transform.position + offset.transform.position;
+
+        go = Instantiate(MainTurrets[selected], (turretpos), Quaternion.identity) as GameObject;
         go.transform.parent = GameObject.Find("MainTurret").transform;
-        go.transform.position = go.transform.parent.position;
+
 
     }
     public void Iterate(int iteration)
@@ -32,9 +36,12 @@ public class TankCreation : MonoBehaviour
 
         Destroy(go);
 
-        go = Instantiate(MainTurrets[selected], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        GameObject offset = MainTurrets[selected] as GameObject;
+
+        Vector3 turretpos = GameObject.Find("MainTurret").transform.position + offset.transform.position;
+
+        go = Instantiate(MainTurrets[selected], (turretpos), Quaternion.identity) as GameObject;
         go.transform.parent = GameObject.Find("MainTurret").transform;
-        go.transform.position = go.transform.parent.position;
     }
 
     // Update is called once per frame
