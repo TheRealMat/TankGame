@@ -7,8 +7,7 @@ public class TurretButtons : MonoBehaviour
     public int value;
     public void DoTheThing()
     {
-        GameObject.Find("TankCreator").GetComponent<TankCreation>().Iterate(value);
-        Debug.Log("unga");
+        GameObject.Find("TankCreator").GetComponent<TankCreation>().TurretIterate(value);
     }
 
 }

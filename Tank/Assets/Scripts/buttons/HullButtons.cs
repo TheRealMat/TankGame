@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class HullButtons : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int value;
+    public void DoTheThing()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject.Find("TankCreator").GetComponent<TankCreation>().HullIterate(value);
     }
 }
