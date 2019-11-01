@@ -813,6 +813,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
-  - Assets/Scenes/game.unity
   - Assets/Scenes/menu.unity
+  - Assets/Scenes/game.unity
   playerPath: C:/Users/Mat/Documents/Tank/TankGame/Build/Tank.exe
