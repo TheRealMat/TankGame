@@ -71,7 +71,6 @@ public class TankCreation : MonoBehaviour
         Destroy(hull);
 
         CreateHull();
-        // i need to somehow keep the turret and stick it on here
     }
     // Update is called once per frame
     void Update()
