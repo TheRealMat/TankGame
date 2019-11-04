@@ -19,9 +19,10 @@ public class TankCreation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         CreateHull();
         CreateTurret();
+        // this stays here when you return to the menu. oops
+        DontDestroyOnLoad(GameObject.Find("ExampleTank"));
     }
 
     private void CreateHull()
