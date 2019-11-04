@@ -12,8 +12,8 @@ public class TankCreation : MonoBehaviour
     {
 
     };
-    int hullSelected = 0;
-    int mainTurretSelected = 0;
+    public int hullSelected = 0;
+    public int mainTurretSelected = 0;
     GameObject mainTurret;
     GameObject hull;
     // Start is called before the first frame update
@@ -67,7 +67,7 @@ public class TankCreation : MonoBehaviour
         {
             hullSelected--;
         }
-
+        mainTurret.transform.parent = null;
         Destroy(hull);
 
         CreateHull();
